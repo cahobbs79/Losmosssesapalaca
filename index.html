@@ -22,7 +22,7 @@
             padding: 20px;
             min-height: 100vh;
             position: relative;
-            font-size: 24px;
+            font-size: 16px;
             background-color: var(--bg-color);
         }
         #backgroundImage {
@@ -35,7 +35,7 @@
             z-index: -1;
         }
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
@@ -46,19 +46,19 @@
             color: var(--primary-color);
             width: 100%;
         }
-        h1 { font-size: 48px; }
-        h2 { font-size: 36px; }
+        h1 { font-size: 32px; }
+        h2 { font-size: 24px; }
         .categories {
-            width: 30%;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 10px;
             margin-bottom: 20px;
         }
         .category {
             position: relative;
-            width: calc(50% - 10px);
-            padding-top: calc(50% - 10px);
+            width: calc(33.33% - 10px);
+            padding-top: calc(33.33% - 10px);
             cursor: pointer;
             border-radius: 15px;
             overflow: hidden;
@@ -79,9 +79,9 @@
             right: 0;
             background-color: rgba(0, 0, 0, 0.7);
             color: var(--text-color);
-            padding: 10px;
+            padding: 5px;
             text-align: center;
-            font-size: 20px;
+            font-size: 14px;
         }
         .selected {
             border-color: var(--primary-color);
@@ -89,17 +89,17 @@
         .category::after {
             content: '';
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 5px;
+            right: 5px;
             background-color: var(--primary-color);
             color: var(--text-color);
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 12px;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -107,19 +107,18 @@
             opacity: 1;
         }
         .main-content {
-            width: 65%;
-            margin-left: 5%;
+            width: 100%;
         }
         input, textarea, button, select {
             width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 10px;
+            margin-bottom: 10px;
             background-color: var(--input-bg-color);
             border: none;
             color: var(--text-color);
-            border-radius: 10px;
+            border-radius: 5px;
             font-family: 'Avenir', Arial, sans-serif;
-            font-size: 24px;
+            font-size: 16px;
         }
         button {
             background-color: var(--button-bg-color);
@@ -138,7 +137,7 @@
             position: relative;
             overflow: hidden;
             display: inline-block;
-            padding: 28px;
+            width: 100%;
         }
         .file-input-wrapper input[type=file] {
             font-size: 100px;
@@ -148,17 +147,17 @@
             opacity: 0;
         }
         .prompt-count {
-            font-size: 20px;
+            font-size: 14px;
             color: #B0B0B0;
-            margin-top: 15px;
+            margin-top: 10px;
         }
         .background-controls {
             display: flex;
             align-items: center;
-            margin-top: 15px;
+            margin-top: 10px;
         }
         .background-controls label {
-            margin-right: 15px;
+            margin-right: 10px;
             white-space: nowrap;
         }
         #opacitySlider {
@@ -177,16 +176,16 @@
         .modal-content {
             background-color: var(--modal-bg-color);
             margin: 5% auto;
-            padding: 30px;
+            padding: 20px;
             border: 1px solid #888;
             width: 90%;
-            max-width: 800px;
+            max-width: 600px;
             border-radius: 15px;
         }
         .close {
             color: #aaa;
             float: right;
-            font-size: 42px;
+            font-size: 28px;
             font-weight: bold;
         }
         .close:hover,
@@ -196,23 +195,91 @@
             cursor: pointer;
         }
         #savedPromptsList {
-            max-height: 500px;
+            max-height: 400px;
             overflow-y: auto;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .saved-prompt {
             background-color: var(--input-bg-color);
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
         }
         .saved-prompt button {
-            margin-top: 10px;
-            margin-right: 10px;
+            margin-top: 5px;
+            margin-right: 5px;
         }
         #themeSelector {
-            width: 35%;
-            margin-left: 60%;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (min-width: 768px) {
+            /* Styles for iPad and larger screens */
+            body {
+                font-size: 18px;
+            }
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+            .categories {
+                width: 30%;
+            }
+            .category {
+                width: calc(50% - 10px);
+                padding-top: calc(50% - 10px);
+            }
+            .main-content {
+                width: 65%;
+                margin-left: 5%;
+            }
+            .category-name {
+                font-size: 16px;
+            }
+            input, textarea, button, select {
+                font-size: 18px;
+            }
+            #themeSelector {
+                width: 35%;
+                margin-left: 60%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            /* Styles for larger screens */
+            body {
+                font-size: 24px;
+            }
+            h1 { font-size: 48px; }
+            h2 { font-size: 36px; }
+            .category-name {
+                font-size: 20px;
+            }
+            input, textarea, button, select {
+                font-size: 24px;
+            }
+        }
+
+        /* iPhone 15 Pro Max specific styles */
+        @media only screen 
+            and (device-width: 430px) 
+            and (device-height: 932px) 
+            and (-webkit-device-pixel-ratio: 3) {
+            body {
+                font-size: 14px;
+            }
+            h1 { font-size: 28px; }
+            h2 { font-size: 22px; }
+            .category {
+                width: calc(50% - 5px);
+                padding-top: calc(50% - 5px);
+            }
+            .category-name {
+                font-size: 12px;
+            }
+            input, textarea, button, select {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -289,12 +356,6 @@
         let thumbnails = {};
         let backgroundImageData = null;
 
-        // Initialize prompts and thumbnails
-        categories.forEach(category => {
-            prompts[category] = [];
-            thumbnails[category] = `https://via.placeholder.com/150x150.png?text=${encodeURIComponent(category)}`;
-        });
-
         function loadData() {
             const savedData = localStorage.getItem('promptGeneratorData');
             if (savedData) {
@@ -333,7 +394,7 @@
                 div.className = `category${category === currentCategory ? ' selected' : ''}`;
                 div.onclick = () => selectCategory(category);
                 div.innerHTML = `
-                    <img src="${thumbnails[category]}" alt="${category}">
+                    <img src="${thumbnails[category] || `https://via.placeholder.com/150x150.png?text=${encodeURIComponent(category)}`}" alt="${category}">
                     <div class="category-name">${category}</div>
                 `;
                 categoriesDiv.appendChild(div);
@@ -352,7 +413,7 @@
         function updatePromptCount() {
             const countElement = document.querySelector('.prompt-count') || document.createElement('div');
             countElement.className = 'prompt-count';
-            countElement.textContent = `Prompts: ${prompts[currentCategory].length}`;
+            countElement.textContent = `Prompts: ${prompts[currentCategory]?.length || 0}`;
             document.getElementById('categories').appendChild(countElement);
         }
 
@@ -361,7 +422,7 @@
             const preset = document.getElementById('preset').value;
             const contrast = document.getElementById('contrast').value;
             const categoryPrompts = prompts[currentCategory];
-            if (categoryPrompts.length === 0) {
+            if (!categoryPrompts || categoryPrompts.length === 0) {
                 alert(`No prompts available for ${currentCategory}`);
                 return;
             }
@@ -395,7 +456,7 @@
                 reader.onload = function(e) {
                     const content = e.target.result;
                     const newPrompts = content.split('\n').filter(line => line.trim() !== '');
-                    prompts[currentCategory] = prompts[currentCategory].concat(newPrompts);
+                    prompts[currentCategory] = (prompts[currentCategory] || []).concat(newPrompts);
                     saveData();
                     updatePromptCount();
                     alert(`Imported ${newPrompts.length} prompts to category: ${currentCategory}`);
@@ -408,18 +469,13 @@
             const data = {
                 prompts: prompts,
                 savedPrompts: savedPrompts,
-                thumbnails: thumbnails, // These are already base64 data URLs
-                backgroundImageData: backgroundImageData, // This is already a base64 data URL
+                thumbnails: thumbnails,
+                backgroundImageData: backgroundImageData,
                 backgroundOpacity: document.getElementById('opacitySlider').value
             };
             
-            // Convert the data to a JSON string
             const dataStr = JSON.stringify(data);
-            
-            // Create a Blob with the JSON data
             const blob = new Blob([dataStr], {type: "application/json"});
-            
-            // Create a download link and trigger the download
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
@@ -438,14 +494,13 @@
                     try {
                         const importedData = JSON.parse(e.target.result);
                         
-                        // Validate and import the data
                         if (importedData.prompts && importedData.savedPrompts && importedData.thumbnails) {
                             prompts = importedData.prompts;
                             savedPrompts = importedData.savedPrompts;
-                            thumbnails = importedData.thumbnails; // These are base64 data URLs
+                            thumbnails = importedData.thumbnails;
                             
                             if (importedData.backgroundImageData) {
-                                backgroundImageData = importedData.backgroundImageData; // This is a base64 data URL
+                                backgroundImageData = importedData.backgroundImageData;
                                 document.getElementById('backgroundImage').src = backgroundImageData;
                             }
                             
@@ -474,7 +529,7 @@
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    thumbnails[currentCategory] = e.target.result; // This will be a base64 data URL
+                    thumbnails[currentCategory] = e.target.result;
                     renderCategories();
                     saveData();
                 };
@@ -487,7 +542,7 @@
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    backgroundImageData = e.target.result; // This will be a base64 data URL
+                    backgroundImageData = e.target.result;
                     document.getElementById('backgroundImage').src = backgroundImageData;
                     saveData();
                 };
@@ -541,7 +596,7 @@
             if (newPrompt && newPrompt !== savedPrompt.prompt) {
                 savedPrompts[index].prompt = newPrompt;
                 saveData();
-                openSavedPrompts(); // Refresh the list
+                openSavedPrompts();
             }
         }
 
@@ -549,7 +604,7 @@
             if (confirm('Are you sure you want to delete this prompt?')) {
                 savedPrompts.splice(index, 1);
                 saveData();
-                openSavedPrompts(); // Refresh the list
+                openSavedPrompts();
             }
         }
 
